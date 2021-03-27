@@ -141,6 +141,25 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  let str ="";
+  // let mainarr=[];
+  let farr=[];
+  let arrjoin =[];
+  let arrsub = recipe['ingredients'];
+  for(let i =0 ;i<arrsub.length;i++){
+   
+     for(let j=0;j<=arrsub[i].length;j++){
+     if(arrsub[i][j] === " " || j=== arrsub[i].length){
+  
+       farr.push(str)
+     str=""
+     }else{str+=arrsub[i][j];}
+     }
+  
+   arrjoin=(farr.slice(2));
+   result.push(arrjoin.join(' '))
+   farr=[]
+  }
   return result;
 };
 
