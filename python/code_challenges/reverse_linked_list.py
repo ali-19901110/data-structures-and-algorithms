@@ -1,3 +1,4 @@
+from collections import deque
 def reverse_list(ll):
     """Reverses a linked list
     Args:
@@ -6,4 +7,10 @@ def reverse_list(ll):
         linked list in reversed form
     """
     # put your function implementation here
-    return a[::-1]
+    from collections import deque
+    items = deque([1, 2])
+    items.append(3)      
+    items.rotate(1)       
+    items.rotate(-1)       
+    item = items.popleft() 
+    return item
